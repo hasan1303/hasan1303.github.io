@@ -1,0 +1,291 @@
+import type { BlogPost, Project, Experience, Skill, Stat, Author, BlogCategoryConfig } from '~/types'
+
+// ===== AUTHOR (real data from GitHub: hasan1303) =====
+export const author: Author = {
+  name: 'Hasan',
+  initials: 'H',
+  title: 'Frontend Developer · Vue.js & WordPress',
+  twitter: '@hasan1303',
+  github: 'hasan1303',
+  linkedin: 'hasan1303',
+}
+
+// ===== STATS =====
+export const stats: Stat[] = [
+  { value: '3+', label: 'years exp.' },
+  { value: '6+', label: 'projects shipped' },
+  { value: '100%', label: 'open source' },
+  { value: 'Vue.js', label: 'primary stack' },
+]
+
+// ===== SKILLS =====
+export const skills: Skill[] = [
+  {
+    id: 'frontend',
+    name: 'Frontend Development',
+    description: 'Building responsive, performant interfaces with Vue 3 and the Composition API. Clean code, reusable components, and smooth UX.',
+    icon: '⚡',
+    tags: ['Vue.js 3', 'Nuxt 3', 'Vite', 'JavaScript'],
+  },
+  {
+    id: 'styling',
+    name: 'UI & Styling',
+    description: 'Crafting premium, pixel-perfect designs with Tailwind CSS and custom CSS3. Dark mode, animations, responsive layouts.',
+    icon: '🎨',
+    tags: ['Tailwind CSS', 'CSS3', 'Responsive', 'Dark Mode'],
+  },
+  {
+    id: 'wordpress',
+    name: 'WordPress & CMS',
+    description: 'Custom WordPress themes and plugins. Headless WordPress with Vue.js frontends. Content management and SEO optimization.',
+    icon: '🌐',
+    tags: ['WordPress', 'PHP', 'Headless CMS', 'SEO'],
+  },
+  {
+    id: 'state',
+    name: 'State & Data',
+    description: 'Managing application state with Pinia and Vue composables. Local persistence with localStorage. Chart.js for data visualization.',
+    icon: '🗄️',
+    tags: ['Pinia', 'Chart.js', 'localStorage', 'Composables'],
+  },
+  {
+    id: 'tools',
+    name: 'Dev Tools & Workflow',
+    description: 'Modern development workflow with Git, GitHub Actions for CI/CD, and GitHub Pages for deployment. Clean commit history.',
+    icon: '🔧',
+    tags: ['Git', 'GitHub Actions', 'GitHub Pages', 'Vite'],
+  },
+  {
+    id: 'ux',
+    name: 'UX & Interactions',
+    description: 'Drag & drop interfaces, real-time search, toast notifications, modal systems, and smooth micro-animations.',
+    icon: '✨',
+    tags: ['Drag & Drop', 'Animations', 'Accessibility', 'Mobile-first'],
+  },
+]
+
+// ===== EXPERIENCE =====
+export const experience: Experience[] = [
+  {
+    id: 'freelance',
+    role: 'Freelance Frontend Developer',
+    company: 'Self-employed',
+    location: 'Remote',
+    period: '2022 — Present',
+    description: 'Building Vue.js web applications and WordPress solutions for clients. Focused on clean UI, performance, and modern development practices.',
+    technologies: ['Vue.js 3', 'Nuxt 3', 'Tailwind CSS', 'WordPress'],
+    current: true,
+  },
+  {
+    id: 'projectflow',
+    role: 'Personal Project — ProjectFlow',
+    company: 'Open Source',
+    location: 'GitHub',
+    period: '2024',
+    description: 'Built a full Kanban-style project management app from scratch. Implemented drag & drop, real-time filtering, priority management, localStorage persistence, and activity logs.',
+    technologies: ['Vue.js 3', 'Vite', 'CSS3', 'GitHub Pages'],
+  },
+  {
+    id: 'expense',
+    role: 'Personal Project — Smart Expense Tracker',
+    company: 'Open Source',
+    location: 'GitHub',
+    period: '2024',
+    description: 'Built a personal finance dashboard with interactive Chart.js visualizations, budget tracking, category filtering, and dark mode UI.',
+    technologies: ['Vue.js 3', 'Chart.js', 'Vite', 'CSS3'],
+  },
+  {
+    id: 'learning',
+    role: 'Frontend Development Student',
+    company: 'Self-taught',
+    location: 'Online',
+    period: '2021 — 2022',
+    description: 'Intensive self-study of modern frontend development: HTML/CSS fundamentals, JavaScript ES6+, Vue.js ecosystem, and responsive design principles.',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Vue.js'],
+  },
+]
+
+// ===== BLOG CATEGORIES =====
+export const blogCategories: BlogCategoryConfig[] = [
+  { label: 'Vue.js', slug: 'frontend', color: 'var(--accent2)', bgColor: 'rgba(123,110,246,0.1)', borderColor: 'rgba(123,110,246,0.2)' },
+  { label: 'CSS', slug: 'devops', color: 'var(--green)', bgColor: 'rgba(62,207,142,0.1)', borderColor: 'rgba(62,207,142,0.2)' },
+  { label: 'JavaScript', slug: 'backend', color: 'var(--cyan)', bgColor: 'rgba(34,211,238,0.1)', borderColor: 'rgba(34,211,238,0.2)' },
+  { label: 'WordPress', slug: 'architecture', color: 'var(--amber)', bgColor: 'rgba(245,158,11,0.1)', borderColor: 'rgba(245,158,11,0.2)' },
+  { label: 'Career', slug: 'ai', color: '#e879f9', bgColor: 'rgba(232,121,249,0.1)', borderColor: 'rgba(232,121,249,0.2)' },
+]
+
+// ===== BLOG POSTS =====
+export const blogPosts: BlogPost[] = [
+  {
+    id: 1,
+    slug: 'vue3-composition-api-guide',
+    title: 'Vue 3 Composition API: From Options API to Composables — A Practical Guide',
+    excerpt: 'How I rewrote a complex Vue 2 app using the Composition API and what I learned about code organization, reusability, and testability.',
+    category: 'frontend',
+    tags: ['Vue.js', 'Composition API', 'JavaScript'],
+    publishedAt: '2024-12-10',
+    readTime: 10,
+    featured: true,
+    coverEmoji: '⚡',
+    coverColor: 'linear-gradient(135deg, #0d1a2e, #060e1a)',
+    author,
+  },
+  {
+    id: 2,
+    slug: 'kanban-drag-drop-vue',
+    title: 'Building a Production-Ready Kanban Board with Drag & Drop in Vue.js',
+    excerpt: 'The complete walkthrough of how I built the drag & drop system in ProjectFlow — without a library, using native HTML5 APIs.',
+    category: 'frontend',
+    tags: ['Vue.js', 'Drag & Drop', 'Kanban'],
+    publishedAt: '2024-11-22',
+    readTime: 14,
+    featured: true,
+    coverEmoji: '🏗️',
+    coverColor: 'linear-gradient(135deg, #1e1a0a, #100e05)',
+    author,
+  },
+  {
+    id: 3,
+    slug: 'chartjs-vue-dashboard',
+    title: 'Interactive Financial Charts with Chart.js and Vue 3 — What I Built and Why',
+    excerpt: 'Building the analytics dashboard for my expense tracker: reactive charts, custom themes, and how to make them feel native to your app.',
+    category: 'frontend',
+    tags: ['Chart.js', 'Vue.js', 'Data Viz'],
+    publishedAt: '2024-11-05',
+    readTime: 9,
+    featured: false,
+    coverEmoji: '📊',
+    coverColor: 'linear-gradient(135deg, #0a1428, #050910)',
+    author,
+  },
+  {
+    id: 4,
+    slug: 'tailwind-dark-mode-patterns',
+    title: 'Tailwind CSS Dark Mode: The Patterns That Actually Work in Production',
+    excerpt: 'After building several projects with dark mode, I\'ve settled on patterns that avoid the common pitfalls — flash of wrong theme, inconsistent colors, and maintenance nightmares.',
+    category: 'devops',
+    tags: ['Tailwind CSS', 'Dark Mode', 'CSS'],
+    publishedAt: '2024-10-18',
+    readTime: 8,
+    featured: false,
+    coverEmoji: '🌙',
+    coverColor: 'linear-gradient(135deg, #0a0a2e, #050514)',
+    author,
+  },
+  {
+    id: 5,
+    slug: 'pinia-localstorage-persistence',
+    title: 'Pinia + localStorage: Persisting State the Right Way in Vue.js Apps',
+    excerpt: 'How I built the persistence layer for ProjectFlow using a custom Pinia plugin — handles serialization, hydration, and edge cases cleanly.',
+    category: 'frontend',
+    tags: ['Pinia', 'Vue.js', 'localStorage'],
+    publishedAt: '2024-09-30',
+    readTime: 7,
+    featured: false,
+    coverEmoji: '💾',
+    coverColor: 'linear-gradient(135deg, #1a0a2e, #0e0516)',
+    author,
+  },
+  {
+    id: 6,
+    slug: 'headless-wordpress-vue',
+    title: 'Headless WordPress + Vue.js: Why I Chose This Stack and How to Set It Up',
+    excerpt: 'WordPress gives you the best CMS. Vue gives you the best frontend DX. Using them together via REST API is easier than you\'d think.',
+    category: 'architecture',
+    tags: ['WordPress', 'Vue.js', 'Headless CMS'],
+    publishedAt: '2024-09-10',
+    readTime: 12,
+    featured: true,
+    coverEmoji: '🌐',
+    coverColor: 'linear-gradient(135deg, #1e0a2e, #0d0415)',
+    author,
+  },
+]
+
+// ===== PROJECTS (real repos from hasan1303 GitHub) =====
+export const projects: Project[] = [
+  {
+    id: 1,
+    slug: 'projectflow',
+    name: 'ProjectFlow',
+    description: 'Modern Kanban-style project management app with drag & drop, priority filtering, real-time search, activity logs, and localStorage persistence.',
+    longDescription: 'A portfolio-ready task and project management application designed to simulate a real-world productivity dashboard.',
+    status: 'open-source',
+    featured: true,
+    stars: 0,
+    technologies: ['Vue.js 3', 'Vite', 'JavaScript', 'CSS3', 'GitHub Pages'],
+    githubUrl: 'https://github.com/hasan1303/projectflow',
+    demoUrl: 'https://hasan1303.github.io/projectflow/',
+    coverEmoji: '📋',
+    coverGradient: 'linear-gradient(135deg, #1a1a3e, #0d0d25)',
+    previewImage: 'https://repository-images.githubusercontent.com/1202023209/7fc27644-cb0b-4410-bf2e-aafee128ccb5',
+    period: '2024',
+    role: 'Solo Developer',
+    stack: 'Vue.js 3, Vite, CSS3, GitHub Actions',
+    highlights: [
+      'Native HTML5 drag & drop (no library)',
+      'Real-time task search and priority filtering',
+      'Activity log and progress statistics',
+      'Fully responsive — mobile and desktop',
+    ],
+  },
+  {
+    id: 2,
+    slug: 'smart-expense-tracker',
+    name: 'Smart Expense Tracker',
+    description: 'Personal finance dashboard with interactive Chart.js charts, budget tracking, category filtering, dark mode UI, and localStorage persistence.',
+    status: 'open-source',
+    featured: true,
+    stars: 0,
+    technologies: ['Vue.js 3', 'Chart.js', 'Vite', 'CSS3'],
+    githubUrl: 'https://github.com/hasan1303/smart-expense-tracker-vue',
+    demoUrl: 'https://hasan1303.github.io/smart-expense-tracker-vue/',
+    coverEmoji: '💸',
+    coverGradient: 'linear-gradient(135deg, #0a2e1a, #041409)',
+    previewImage: 'https://opengraph.githubassets.com/1ad3af5cab3aa3eedd2102713f3a97b0322b03a82dd373d7b57838e8f4b321ef/hasan1303/smart-expense-tracker-vue',
+    period: '2024',
+    role: 'Solo Developer',
+    stack: 'Vue.js 3, Chart.js, Vite, CSS3',
+    highlights: [
+      'Interactive income/expense bar & pie charts',
+      'Monthly budget tracking with over-budget alerts',
+      'Real-time transaction search and category filters',
+      'Dark mode UI with localStorage persistence',
+    ],
+  },
+  {
+    id: 3,
+    slug: 'task-dashboard',
+    name: 'Task Dashboard',
+    description: 'Clean task management dashboard with JavaScript. Focused on intuitive UX and clean component architecture.',
+    status: 'open-source',
+    featured: false,
+    stars: 0,
+    technologies: ['JavaScript', 'HTML', 'CSS3'],
+    githubUrl: 'https://github.com/hasan1303/task-dashboard',
+    coverEmoji: '✅',
+    coverGradient: 'linear-gradient(135deg, #1a2e0a, #0c1a05)',
+    period: '2023',
+    role: 'Solo Developer',
+    stack: 'Vanilla JavaScript, HTML5, CSS3',
+    highlights: [
+      'CRUD task operations',
+      'Clean and minimal UI',
+      'No framework dependencies',
+    ],
+  },
+]
+
+export const techFilters = [
+  { label: 'All', value: 'all' },
+  { label: 'Vue.js', value: 'vue' },
+  { label: 'JavaScript', value: 'javascript' },
+  { label: 'CSS', value: 'css' },
+  { label: 'Open Source', value: 'open-source' },
+]
+
+export const techMarqueeItems = [
+  'Vue.js 3', 'Nuxt 3', 'Vite', 'TypeScript', 'JavaScript',
+  'Tailwind CSS', 'Pinia', 'Chart.js', 'WordPress', 'GitHub Actions',
+  'CSS3', 'HTML5', 'GitHub Pages', 'Composition API',
+]
