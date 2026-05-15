@@ -22,7 +22,7 @@
             Start a conversation →
           </NuxtLink>
           <a href="mailto:hello@alexmercer.dev" class="btn-secondary">
-            hello@alexmercer.dev
+            hello@dev
           </a>
         </div>
       </div>
