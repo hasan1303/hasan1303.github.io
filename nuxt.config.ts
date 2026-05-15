@@ -12,7 +12,6 @@ export default defineNuxtConfig({
     '@nuxt/image',
   ],
 
-  // Google Fonts — self-hosted, zero render blocking
   googleFonts: {
     families: {
       Syne: [400, 500, 600, 700, 800],
@@ -86,14 +85,32 @@ export default defineNuxtConfig({
     layoutTransition: { name: 'layout', mode: 'out-in' },
   },
 
+  // SSG - generate all routes as static HTML files
   routeRules: {
-    '/': { prerender: true },
-    '/about': { prerender: true },
-    '/contact': { prerender: true },
-    '/projects': { prerender: true },
-    '/projects/**': { prerender: true },
-    '/blog': { swr: 1800 },
-    '/blog/**': { swr: 3600 },
+    '/**': { prerender: true },
+  },
+
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: [
+        '/',
+        '/about',
+        '/contact',
+        '/projects',
+        '/projects/projectflow',
+        '/projects/smart-expense-tracker',
+        '/projects/task-dashboard',
+        '/blog',
+        '/blog/vue3-composition-api-guide',
+        '/blog/kanban-drag-drop-vue',
+        '/blog/chartjs-vue-dashboard',
+        '/blog/tailwind-dark-mode-patterns',
+        '/blog/pinia-localstorage-persistence',
+        '/blog/headless-wordpress-vue',
+      ],
+      failOnError: false,
+    },
   },
 
   typescript: {

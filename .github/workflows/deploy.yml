@@ -36,6 +36,9 @@ jobs:
           NUXT_PUBLIC_SITE_URL: https://hasan1303.github.io
           NODE_ENV: production
 
+      - name: Copy 404 for SPA routing
+        run: cp .output/public/index.html .output/public/404.html || true
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
