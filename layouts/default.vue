@@ -1,11 +1,13 @@
 <template>
-  <div class="min-h-screen flex flex-col" :style="{ background: 'var(--bg)', color: 'var(--text)' }">
+  <div :style="{ background: 'var(--bg)', color: 'var(--text)' }" class="min-h-screen flex flex-col">
     <AppNavbar />
     <main class="flex-1">
       <slot />
     </main>
     <AppFooter />
-    <AppToast />
+    <ClientOnly>
+      <AppToast />
+    </ClientOnly>
   </div>
 </template>
 
@@ -14,7 +16,6 @@ function initReveal() {
   if (!import.meta.client) return
   const elements = document.querySelectorAll('.reveal:not(.visible)')
   if (!elements.length) return
-
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -29,10 +30,7 @@ function initReveal() {
   elements.forEach((el) => observer.observe(el))
 }
 
-onMounted(() => { setTimeout(initReveal, 100) })
-
+onMounted(() => setTimeout(initReveal, 150))
 const route = useRoute()
-watch(() => route.path, () => {
-  nextTick(() => setTimeout(initReveal, 150))
-})
+watch(() => route.path, () => nextTick(() => setTimeout(initReveal, 200)))
 </script>

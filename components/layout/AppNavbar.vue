@@ -22,14 +22,20 @@
     </ul>
 
     <div class="flex items-center gap-3">
-      <button
-        class="w-10 h-10 rounded-lg flex items-center justify-center text-lg transition-all duration-200 theme-btn"
-        :style="{ border: '1px solid var(--border2)', color: 'var(--text2)' }"
-        :aria-label="colorMode.value === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
-        @click="toggleColorMode"
-      >
-        <span>{{ colorMode.value === 'dark' ? '🌙' : '☀️' }}</span>
-      </button>
+      <!-- ClientOnly prevents hydration mismatch on theme icon -->
+      <ClientOnly>
+        <button
+          class="w-10 h-10 rounded-lg flex items-center justify-center text-lg transition-all duration-200 theme-btn"
+          :style="{ border: '1px solid var(--border2)', color: 'var(--text2)' }"
+          :aria-label="colorMode.value === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+          @click="toggleColorMode"
+        >
+          <span>{{ colorMode.value === 'dark' ? '🌙' : '☀️' }}</span>
+        </button>
+        <template #fallback>
+          <div class="w-10 h-10 rounded-lg" :style="{ border: '1px solid var(--border2)' }" />
+        </template>
+      </ClientOnly>
 
       <a
         href="https://github.com/hasan1303"

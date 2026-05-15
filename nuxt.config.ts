@@ -29,6 +29,11 @@ export default defineNuxtConfig({
     preference: 'dark',
     fallback: 'dark',
     storageKey: 'portfolio-color-mode',
+    // This prevents hydration mismatch for color mode
+    hid: 'nuxt-color-mode-script',
+    globalName: '__NUXT_COLOR_MODE__',
+    componentName: 'ColorScheme',
+    dataValue: 'theme',
   },
 
   tailwindcss: {
@@ -83,11 +88,6 @@ export default defineNuxtConfig({
     },
     pageTransition: { name: 'page', mode: 'out-in' },
     layoutTransition: { name: 'layout', mode: 'out-in' },
-  },
-
-  // SSG - generate all routes as static HTML files
-  routeRules: {
-    '/**': { prerender: true },
   },
 
   nitro: {

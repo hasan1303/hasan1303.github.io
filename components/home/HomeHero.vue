@@ -7,28 +7,24 @@
       style="background: radial-gradient(circle, rgba(34,211,238,0.08) 0%, transparent 70%)" />
 
     <div class="max-w-wide mx-auto w-full relative z-10">
-      <!-- Badge -->
       <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-8 font-mono text-xs hero-anim"
         style="border: 1px solid rgba(123,110,246,0.3); background: rgba(123,110,246,0.08); color: var(--accent2); animation-delay: 0s">
-        <div class="status-dot" />
+        <span class="status-dot" />
         Open to new opportunities
       </div>
 
-      <!-- Title -->
       <h1 class="font-display font-extrabold tracking-tighter leading-extra-tight mb-6 hero-anim"
         style="font-size: clamp(3rem, 7vw, 5.5rem); animation-delay: 0.1s">
         Hi, I'm <span class="text-gradient">Hasan</span> —<br>
         I build with <span class="text-gradient">Vue.js</span>
       </h1>
 
-      <!-- Description -->
       <p class="text-lg md:text-xl leading-relaxed max-w-xl mb-10 hero-anim"
         style="color: var(--text2); animation-delay: 0.2s">
         Frontend developer focused on creating clean, responsive web applications.
         I love turning ideas into polished products with Vue.js, Nuxt, and modern CSS.
       </p>
 
-      <!-- CTA buttons -->
       <div class="flex flex-wrap gap-4 hero-anim" style="animation-delay: 0.3s">
         <NuxtLink to="/projects" class="btn-primary">
           View Projects <span>→</span>
@@ -38,7 +34,6 @@
         </a>
       </div>
 
-      <!-- Stats -->
       <div class="flex flex-wrap gap-8 md:gap-12 mt-14 pt-8 hero-anim"
         style="border-top: 1px solid var(--border); animation-delay: 0.4s">
         <div v-for="stat in stats" :key="stat.label">
@@ -47,23 +42,15 @@
         </div>
       </div>
 
-      <!-- Tech tags -->
       <div class="flex flex-wrap gap-2 mt-6 hero-anim" style="animation-delay: 0.5s">
         <span v-for="t in quickTech" :key="t" class="tag text-xs">{{ t }}</span>
       </div>
-    </div>
-
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-      style="color: var(--text3)">
-      <span class="font-mono text-xs">scroll</span>
-      <div class="w-px h-12" style="background: linear-gradient(to bottom, var(--text3), transparent)" />
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
 import { stats } from '~/utils/data'
-
 const quickTech = ['Vue.js 3', 'Nuxt 3', 'Tailwind CSS', 'Pinia', 'Chart.js', 'WordPress']
 </script>
 
