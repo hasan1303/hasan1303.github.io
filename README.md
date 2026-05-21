@@ -1,271 +1,116 @@
-# Alex Mercer — Developer Portfolio + Technical Blog
+<div align="center">
 
-A production-ready **Developer Portfolio + Technical Blog** built with **Nuxt 3**, **Tailwind CSS**, **Pinia**, and full **Strapi CMS** integration support.
+# Hi, I'm Hasan 👋
 
-## ✨ Features
+**Frontend Developer · Vue.js & Nuxt.js**
 
-- **7 Pages** — Home, About, Projects, Project Detail, Blog, Blog Post, Contact
-- **Strapi CMS Integration** — Manage all content without touching code
-- **Dark / Light Mode** — System-aware toggle with localStorage persistence
-- **SEO Optimized** — Dynamic meta tags, Open Graph, Twitter Cards, sitemap.xml, robots.txt, canonical URLs
-- **TypeScript** — Strict typing throughout
-- **Hybrid Rendering** — SSR + SSG + ISR per route
-- **Nuxt Content** — Markdown blog posts with syntax highlighting
-- **Contact Form** — Validation + Resend email integration
-- **Animations** — Page transitions, scroll reveals, marquee
-- **Performance** — Image optimization, lazy loading, code splitting
-- **Fully Responsive** — Mobile-first, looks great on every device
+*Building fast, clean, and modern web experiences*
 
-## 🚀 Tech Stack
+[![Portfolio](https://img.shields.io/badge/Portfolio-hasan1303.github.io-3B82F6?style=flat-square&logo=google-chrome&logoColor=white)](https://hasan1303.github.io)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Hasan_Pisli-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/hasanpisli)
+[![Email](https://img.shields.io/badge/Email-hasanpisli3@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:hasanpisli3@gmail.com)
+[![Upwork](https://img.shields.io/badge/Upwork-Available-6FDA44?style=flat-square&logo=upwork&logoColor=white)](https://upwork.com)
 
-| Layer | Technology |
-|-------|-----------|
-| Framework | Nuxt 3 |
-| Styling | Tailwind CSS |
-| State | Pinia |
-| CMS | Strapi (optional) |
-| Content | Nuxt Content (Markdown) |
-| Auth / DB | Supabase (optional) |
-| Email | Resend |
-| Images | Nuxt Image |
-| Language | TypeScript |
-| Utilities | VueUse |
+</div>
 
-## 📁 Project Structure
-
-```
-alex-mercer-portfolio/
-├── assets/
-│   └── css/
-│       └── tailwind.css        # Global styles & design tokens
-├── components/
-│   ├── blog/
-│   │   └── BlogCard.vue        # Blog post card
-│   ├── home/
-│   │   ├── HomeHero.vue        # Hero section
-│   │   ├── HomeTechStrip.vue   # Scrolling tech marquee
-│   │   ├── HomeSkills.vue      # Skills grid
-│   │   ├── HomeExperience.vue  # Timeline
-│   │   ├── HomeFeaturedProjects.vue
-│   │   └── HomeCtaBanner.vue   # CTA section
-│   ├── layout/
-│   │   ├── AppNavbar.vue       # Fixed navigation
-│   │   ├── AppFooter.vue       # Site footer
-│   │   └── AppToast.vue        # Toast notifications
-│   ├── projects/
-│   │   └── ProjectsCard.vue    # Project card
-│   └── ui/
-│       └── UiSkillCard.vue     # Reusable skill card
-├── composables/
-│   └── index.ts                # useScroll, useSEO, useReadingProgress, useStrapi
-├── content/
-│   └── blog/                   # Markdown blog posts (Nuxt Content)
-│       └── building-1m-rps-api-go.md
-├── layouts/
-│   └── default.vue             # Main layout with scroll reveal
-├── pages/
-│   ├── index.vue               # Home (/)
-│   ├── about.vue               # About (/about)
-│   ├── contact.vue             # Contact (/contact)
-│   ├── blog/
-│   │   ├── index.vue           # Blog listing (/blog)
-│   │   └── [slug].vue          # Blog post (/blog/:slug)
-│   └── projects/
-│       ├── index.vue           # Projects listing (/projects)
-│       └── [slug].vue          # Project detail (/projects/:slug)
-├── server/
-│   ├── api/
-│   │   ├── blog/
-│   │   │   ├── index.get.ts    # GET /api/blog
-│   │   │   └── [slug].get.ts   # GET /api/blog/:slug
-│   │   ├── contact/
-│   │   │   └── index.post.ts   # POST /api/contact
-│   │   └── projects/
-│   │       └── index.get.ts    # GET /api/projects
-│   └── routes/
-│       ├── sitemap.xml.ts      # /sitemap.xml
-│       └── robots.txt.ts       # /robots.txt
-├── stores/
-│   └── toast.ts                # Pinia toast store
-├── types/
-│   └── index.ts                # TypeScript interfaces
-├── utils/
-│   └── data.ts                 # Static data (skills, projects, posts, etc.)
-├── .env.example                # Environment variables template
-├── nuxt.config.ts              # Nuxt configuration
-├── tailwind.config.ts          # Tailwind configuration
-└── error.vue                   # Custom error page
-```
-
-## ⚙️ Getting Started
-
-### Prerequisites
-- Node.js 18+
-- npm / pnpm / yarn
-
-### Installation
-
-```bash
-# Clone or download this project
-cd alex-mercer-portfolio
-
-# Install dependencies
-npm install
-
-# Copy environment variables
-cp .env.example .env
-
-# Start dev server
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
-
-## 🔌 Strapi CMS Setup (Optional)
-
-The portfolio works out-of-the-box with local static data. To connect Strapi:
-
-### 1. Create a Strapi project
-
-```bash
-npx create-strapi-app@latest my-cms --quickstart
-```
-
-### 2. Create Content Types in Strapi Admin
-
-**Blog Post** (`blog-posts`)
-| Field | Type | Required |
-|-------|------|----------|
-| title | Text | ✓ |
-| slug | UID (from title) | ✓ |
-| excerpt | Text (long) | ✓ |
-| content | Rich Text (markdown) | |
-| category | Enumeration (backend, frontend, devops, architecture, ai) | ✓ |
-| tags | JSON | |
-| publishedAt | DateTime | |
-| readTime | Integer | |
-| featured | Boolean | |
-| coverEmoji | Text | |
-| coverColor | Text | |
-
-**Project** (`projects`)
-| Field | Type | Required |
-|-------|------|----------|
-| name | Text | ✓ |
-| slug | UID (from name) | ✓ |
-| description | Text (long) | ✓ |
-| technologies | JSON | |
-| status | Enumeration | ✓ |
-| featured | Boolean | |
-| stars | Integer | |
-| githubUrl | Text | |
-| demoUrl | Text | |
-| coverEmoji | Text | |
-| period | Text | |
-| role | Text | |
-
-### 3. Generate API Token
-
-In Strapi Admin → Settings → API Tokens → Create new token (Full access).
-
-### 4. Set environment variables
-
-```env
-STRAPI_URL=http://localhost:1337
-STRAPI_TOKEN=your-api-token
-NUXT_PUBLIC_STRAPI_URL=http://localhost:1337
-```
-
-The API routes automatically fall back to local static data if Strapi is unavailable.
-
-## ✉️ Contact Form Setup
-
-### Using Resend (recommended)
-
-1. Sign up at [resend.com](https://resend.com)
-2. Add your domain and get an API key
-3. Set in `.env`:
-```env
-RESEND_API_KEY=re_xxxxxxxxxxxxx
-EMAIL_FROM=contact@yourdomain.com
-EMAIL_TO=hello@yourdomain.com
-```
-
-## 📝 Adding Blog Posts
-
-### Option A: Markdown files (Nuxt Content)
-
-Create `content/blog/your-post-slug.md`:
-
-```markdown
----
-title: Your Post Title
-slug: your-post-slug
-excerpt: Brief description...
-category: backend
-tags: [Go, Performance]
-publishedAt: 2025-01-15
-readTime: 10
-featured: false
-coverEmoji: 🔩
-coverColor: "linear-gradient(135deg, #0a1428, #050910)"
 ---
 
-Your content here with full **Markdown** support and syntax highlighting.
-```
+## About Me
 
-### Option B: Strapi CMS
+I'm a **Frontend Developer** from Albania 🇦🇱, specialized in **Vue.js 3** and **Nuxt.js 3**, with 2+ years of freelance experience delivering web applications for international clients.
 
-Log in to your Strapi admin panel and create posts through the UI. No code changes needed.
+- 🔭 Currently building projects with **Nuxt 3 + Tailwind CSS**
+- 📚 Completed 49h of structured training — Vue Complete Guide & Nuxt 3 Bootcamp
+- 💼 Delivered **20+ projects** on Upwork & Fiverr with measurable results
+- 🌍 Open to **remote full-time** opportunities
+- ⚡ Fun fact: I optimize for performance first — 50% avg load time reduction across projects
 
-## 🚢 Deployment
+---
 
-### Vercel (recommended)
+## Tech Stack
 
-```bash
-npm install -g vercel
-vercel --prod
-```
+**Frontend Frameworks**
 
-Set environment variables in Vercel Dashboard → Settings → Environment Variables.
+![Vue.js](https://img.shields.io/badge/Vue.js_3-35495E?style=flat-square&logo=vue.js&logoColor=4FC08D)
+![Nuxt.js](https://img.shields.io/badge/Nuxt.js_3-002E3B?style=flat-square&logo=nuxt.js&logoColor=00DC82)
+![JavaScript](https://img.shields.io/badge/JavaScript_ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
 
-### Netlify
+**Styling**
 
-```bash
-npm run generate
-# Deploy the .output/public directory
-```
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwind-css&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
 
-### Self-hosted (Node.js)
+**Vue Ecosystem**
 
-```bash
-npm run build
-node .output/server/index.mjs
-```
+![Pinia](https://img.shields.io/badge/Pinia-FFD859?style=flat-square&logo=vue.js&logoColor=black)
+![Vue Router](https://img.shields.io/badge/Vue_Router-35495E?style=flat-square&logo=vue.js&logoColor=4FC08D)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
 
-## 🛠 Customization
+**Tools & Deployment**
 
-### Personal Info
-Edit `utils/data.ts` to update:
-- Author information
-- Skills and experience
-- Projects
-- Blog posts (if not using Strapi)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
+![WordPress](https://img.shields.io/badge/WordPress-21759B?style=flat-square&logo=wordpress&logoColor=white)
 
-### Colors & Typography
-Edit `assets/css/tailwind.css` CSS variables:
-```css
-:root {
-  --accent: #6457e8;     /* Light mode primary */
-}
-.dark {
-  --accent: #7b6ef6;     /* Dark mode primary */
-}
-```
+---
 
-### Fonts
-Update the Google Fonts link in `nuxt.config.ts` and the font-family variables in `tailwind.config.ts`.
+## Featured Projects
 
-## 📄 License
+### 🗂️ [ProjectFlow](https://hasan1303.github.io/projectflow)
+> Kanban-style project management app built with Vue 3 + Vite
 
-MIT — feel free to use this as your own portfolio.
+- Drag & drop boards, multi-project support, priority filtering, real-time search
+- 10+ reusable components, localStorage persistence, GitHub Actions CI/CD
+- **Stack:** Vue.js 3 · CSS3 · GitHub Pages
+
+---
+
+### 💰 [Smart Expense Tracker](https://hasan1303.github.io/smart-expense-tracker-vue)
+> Personal finance dashboard with real-time visualizations
+
+- Interactive Chart.js graphs, budget tracking, over-budget alerts, dark mode
+- Category filtering, transaction search, full localStorage persistence
+- **Stack:** Vue.js 3 · Chart.js · Vite
+
+---
+
+### ✅ [Task Dashboard](https://hasan1303.github.io/task-dashboard)
+> Minimal and clean Kanban task manager
+
+- Reactive task management with Vue.js core — no extra dependencies
+- **Stack:** Vue.js · JavaScript · CSS3
+
+---
+
+## GitHub Stats
+
+<div align="center">
+
+![Hasan's GitHub Stats](https://github-readme-stats.vercel.app/api?username=hasan1303&show_icons=true&theme=tokyonight&hide_border=true&count_private=true)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=hasan1303&layout=compact&theme=tokyonight&hide_border=true)
+
+</div>
+
+---
+
+## Certifications
+
+| Certificate | Issuer | Year |
+|---|---|---|
+| The Nuxt 3 Bootcamp — Complete Developer Guide | Udemy / Laith Harb | 2026 |
+| Vue — The Complete Guide (Router & Composition API) | Udemy / Maximilian Schwarzmüller | 2026 |
+| React Basics | Coursera / Meta | 2025 |
+| Introduction to Front-End Development | Coursera / Meta | 2025 |
+| Programming with JavaScript | Coursera / Meta | 2025 |
+
+---
+
+<div align="center">
+
+💬 **Available for remote opportunities — let's build something great together!**
+
+[![Portfolio](https://img.shields.io/badge/View_Portfolio-→-3B82F6?style=for-the-badge)](https://hasan1303.github.io)
+
+</div>
