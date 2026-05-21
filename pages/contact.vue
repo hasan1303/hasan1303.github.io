@@ -126,8 +126,8 @@ async function handleSubmit() {
 
 const contactItems = [
   { icon: '📧', label: 'Email', value: 'hasanpisli3@gmail.com' },
-  { icon: '💼', label: 'LinkedIn', value: 'linkedin.com/in/hasan1303' },
-  { icon: '🐙', label: 'GitHub', value: 'github.com/alexmercer' },
-  { icon: '🐦', label: 'Twitter / X', value: '@hasan1303' },
+  { icon: '💼', label: 'LinkedIn', value: 'www.linkedin.com/in/hasanpisli' },
+  { icon: '🐙', label: 'GitHub', value: 'https://github.com/hasan1303' },
+
 ]
 </script>
