@@ -118,16 +118,16 @@ async function handleSubmit() {
     successMsg.value = "✓ Message sent! I'll get back to you within 24 hours."
     Object.assign(form, { firstName: '', lastName: '', email: '', subject: '', message: '' })
   } catch {
-    errors.message = 'Something went wrong. Email me directly at hello@alexmercer.dev'
+    errors.message = 'Something went wrong. Email me directly at hasanpisli3@gmail.com'
   } finally {
     isSubmitting.value = false
   }
 }
 
 const contactItems = [
-  { icon: '📧', label: 'Email', value: 'hello@alexmercer.dev' },
-  { icon: '💼', label: 'LinkedIn', value: 'linkedin.com/in/alexmercer' },
+  { icon: '📧', label: 'Email', value: 'hasanpisli3@gmail.com' },
+  { icon: '💼', label: 'LinkedIn', value: 'linkedin.com/in/hasan1303' },
   { icon: '🐙', label: 'GitHub', value: 'github.com/alexmercer' },
-  { icon: '🐦', label: 'Twitter / X', value: '@alexmercer_dev' },
+  { icon: '🐦', label: 'Twitter / X', value: '@hasan1303' },
 ]
 </script>
