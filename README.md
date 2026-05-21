@@ -84,12 +84,14 @@ I'm a **Frontend Developer** from Albania 🇦🇱, specialized in **Vue.js 3** 
 
 ---
 
-## GitHub Stats
+## By the Numbers
 
 <div align="center">
 
-![Hasan's GitHub Stats](https://github-readme-stats.vercel.app/api?username=hasan1303&show_icons=true&theme=tokyonight&hide_border=true&count_private=true)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=hasan1303&layout=compact&theme=tokyonight&hide_border=true)
+![](https://img.shields.io/badge/Projects_Shipped-20+-3B82F6?style=for-the-badge)
+![](https://img.shields.io/badge/Load_Time_Reduction-50%25_avg-22C55E?style=for-the-badge)
+![](https://img.shields.io/badge/Training_Hours-49h_Vue_%26_Nuxt-8B5CF6?style=for-the-badge)
+![](https://img.shields.io/badge/Available-Remote_Fulltime-F59E0B?style=for-the-badge)
 
 </div>
 
