@@ -21,8 +21,8 @@
           <NuxtLink to="/contact" class="btn-primary">
             Start a conversation →
           </NuxtLink>
-          <a href="mailto:hello@alexmercer.dev" class="btn-secondary">
-            hello@dev
+          <a href="mailto:hasanpisli3@gmail.com" class="btn-secondary">
+            hasanpisli3@gmail.com
           </a>
         </div>
       </div>
