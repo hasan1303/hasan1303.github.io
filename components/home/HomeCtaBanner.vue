@@ -19,7 +19,7 @@
         </p>
         <div class="flex flex-wrap items-center justify-center gap-4">
           <NuxtLink to="/contact" class="btn-primary">
-            Start a conversation →
+            Start a conversation 
           </NuxtLink>
           <a href="mailto:hasanpisli3@gmail.com" class="btn-secondary">
             hasanpisli3@gmail.com
