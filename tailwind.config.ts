@@ -12,6 +12,18 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        ink: '#0B1120',
+        paper: '#F5F3EE',
+        surface: '#1E293B',
+        edge: '#334155',
+        muted: '#94A3B8',
+        vue: {
+          DEFAULT: '#42B883',
+          dark: '#04342C',
+          soft: '#9FE1CB',
+        },
+      },
       fontFamily: {
         display: ['Syne', 'sans-serif'],
         body: ['Instrument Sans', 'sans-serif'],
