@@ -11,7 +11,7 @@
         {{ message }}
       </p>
       <div class="flex flex-wrap gap-3 justify-center">
-        <a href="/" class="btn-primary">Go Home →</a>
+       <a href="/" class="btn-primary">Go home</a>
         <button class="btn-secondary" @click="handleError">
           Try Again
         </button>
