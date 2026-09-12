@@ -1,8 +1,7 @@
 <template>
   <section class="py-24 px-6 md:px-8">
     <div class="max-w-wide mx-auto">
-      <div class="section-label reveal">Experience</div>
-      <h2 class="font-display font-extrabold tracking-tighter text-4xl md:text-5xl mb-12 reveal reveal-delay-1">
+      <h2 class="font-display font-extrabold tracking-tighter text-4xl md:text-5xl mb-12 reveal">
         Where I've worked
       </h2>
 
