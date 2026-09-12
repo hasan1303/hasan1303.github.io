@@ -1,12 +1,10 @@
 <template>
   <div class="card p-6 group cursor-default">
-    <!-- Icon -->
+    <!-- Accent mark -->
     <div
-      class="w-10 h-10 rounded-lg flex items-center justify-center text-xl mb-4 transition-transform duration-300 group-hover:scale-110"
-      style="background: rgba(123,110,246,0.1)"
-    >
-      {{ skill.icon }}
-    </div>
+      class="w-8 h-1 rounded-full mb-5 transition-all duration-300 group-hover:w-12"
+      style="background: var(--accent2)"
+    />
 
     <!-- Name -->
     <h3 class="font-display font-bold text-base mb-2">{{ skill.name }}</h3>
