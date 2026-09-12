@@ -50,7 +50,7 @@
           class="proj-link px-3 py-1.5 rounded-lg font-mono text-xs flex items-center gap-1.5"
           style="border: 1px solid var(--border2); color: var(--text2)"
           @click.stop
-        >↗ GitHub</a>
+        >GitHub</a>
         <a
           v-if="project.demoUrl"
           :href="project.demoUrl"
