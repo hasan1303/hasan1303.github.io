@@ -2,10 +2,10 @@
   <div class="pt-28 pb-24 px-6 md:px-8">
     <div class="max-w-wide mx-auto">
       <div class="section-label reveal">Get in touch</div>
-      <h1 class="font-display font-extrabold tracking-tighter text-5xl md:text-6xl mb-4 reveal reveal-delay-1">
-        Let's build something
-      </h1>
-      <p class="text-lg mb-12 max-w-md reveal reveal-delay-2" style="color: var(--text2)">
+      <h1 class="font-display font-extrabold tracking-tighter text-5xl md:text-6xl mb-4 reveal">
+  Let's build something
+</h1>
+<p class="text-lg mb-12 max-w-md reveal reveal-delay-1" style="color: var(--text2)">
         Whether you have a project in mind, want to collaborate, or just want to say hi — my inbox is open.
       </p>
 
@@ -71,7 +71,7 @@
             :style="{ opacity: isSubmitting ? 0.7 : 1, cursor: isSubmitting ? 'not-allowed' : 'pointer' }"
             @click="handleSubmit"
           >
-            {{ isSubmitting ? 'Sending...' : 'Send Message →' }}
+          {{ isSubmitting ? 'Sending...' : 'Send message' }}
           </button>
 
           <div v-if="successMsg" class="mt-4 p-4 rounded-lg text-sm font-mono text-center"
