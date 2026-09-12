@@ -1,4 +1,4 @@
-\<template>
+<template>
   <div class="pt-28 pb-24 px-6 md:px-8">
     <div class="max-w-wide mx-auto">
       <h1 class="font-display font-extrabold tracking-tighter text-5xl md:text-6xl mb-12 reveal">
@@ -44,7 +44,7 @@
 
           <div class="flex flex-wrap gap-3 mt-8">
             
-            <a href="https://github.com/hasan1303"
+              href="https://github.com/hasan1303"
               target="_blank"
               rel="noopener noreferrer"
               class="btn-primary"
