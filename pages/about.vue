@@ -1,8 +1,7 @@
-<template>
+\<template>
   <div class="pt-28 pb-24 px-6 md:px-8">
     <div class="max-w-wide mx-auto">
-      <div class="section-label reveal">About me</div>
-      <h1 class="font-display font-extrabold tracking-tighter text-5xl md:text-6xl mb-12 reveal reveal-delay-1">
+      <h1 class="font-display font-extrabold tracking-tighter text-5xl md:text-6xl mb-12 reveal">
         Developer, builder,<br>open-source enthusiast
       </h1>
 
@@ -44,13 +43,13 @@
           </div>
 
           <div class="flex flex-wrap gap-3 mt-8">
-            <a
+            
               href="https://github.com/hasan1303"
               target="_blank"
               rel="noopener noreferrer"
               class="btn-primary"
             >
-              ↗ GitHub Profile
+              GitHub profile
             </a>
             <NuxtLink to="/contact" class="btn-secondary">
               Get in touch
@@ -61,29 +60,27 @@
         <!-- Right: Sidebar cards -->
         <div class="flex flex-col gap-5 reveal reveal-delay-2">
           <div class="card p-6">
-            <h4 class="font-display font-bold mb-4">🛠 Tech Stack</h4>
+            <h4 class="font-display font-bold mb-4">Tech stack</h4>
             <ul class="space-y-2.5 list-none">
-              <li v-for="item in techStack" :key="item" class="flex items-center gap-2.5 font-mono text-sm" style="color: var(--text2)">
-                <span style="color: var(--accent2)">→</span>
+              <li v-for="item in techStack" :key="item" class="font-mono text-sm" style="color: var(--text2)">
                 {{ item }}
               </li>
             </ul>
           </div>
 
           <div class="card p-6">
-            <h4 class="font-display font-bold mb-4">📍 Quick Facts</h4>
+            <h4 class="font-display font-bold mb-4">Quick facts</h4>
             <ul class="space-y-2.5 list-none">
-              <li v-for="fact in quickFacts" :key="fact" class="flex items-center gap-2.5 font-mono text-sm" style="color: var(--text2)">
-                <span style="color: var(--accent2)">→</span>
+              <li v-for="fact in quickFacts" :key="fact" class="font-mono text-sm" style="color: var(--text2)">
                 {{ fact }}
               </li>
             </ul>
           </div>
 
           <div class="card p-6">
-            <h4 class="font-display font-bold mb-4">🎯 Interests</h4>
+            <h4 class="font-display font-bold mb-4">Interests</h4>
             <div class="flex flex-wrap gap-2">
-              <span v-for="interest in interests" :key="interest" class="tag flex items-center gap-1.5 text-xs">
+              <span v-for="interest in interests" :key="interest" class="tag text-xs">
                 {{ interest }}
               </span>
             </div>
@@ -91,14 +88,14 @@
 
           <!-- GitHub repos preview -->
           <div class="card p-6">
-            <h4 class="font-display font-bold mb-4">📦 On GitHub</h4>
+            <h4 class="font-display font-bold mb-4">On GitHub</h4>
             <ul class="space-y-3 list-none">
               <li v-for="repo in githubRepos" :key="repo.name">
-                <a
+                
                   :href="repo.url"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="flex items-start justify-between gap-3 group"
+                  class="group"
                 >
                   <div>
                     <div class="text-sm font-medium group-hover:underline" style="color: var(--accent2)">
@@ -106,7 +103,6 @@
                     </div>
                     <div class="text-xs mt-0.5" style="color: var(--text3)">{{ repo.desc }}</div>
                   </div>
-                  <span class="font-mono text-xs flex-shrink-0 mt-0.5" style="color: var(--text3)">↗</span>
                 </a>
               </li>
             </ul>
@@ -142,12 +138,12 @@ const quickFacts = [
 ]
 
 const interests = [
-  '⚡ Vue.js ecosystem',
-  '🎨 Clean UI/UX',
-  '🌙 Dark mode everything',
-  '📊 Data visualization',
-  '🔧 Dev tooling',
-  '🌐 Open source',
+  'Vue.js ecosystem',
+  'Clean UI/UX',
+  'Dark mode everything',
+  'Data visualization',
+  'Dev tooling',
+  'Open source',
 ]
 
 const githubRepos = [
