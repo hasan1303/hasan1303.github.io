@@ -31,8 +31,8 @@
         </div>
 
         <div class="flex flex-wrap gap-3 mt-8">
-          <a v-if="project.githubUrl" :href="project.githubUrl" target="_blank" rel="noopener noreferrer" class="btn-primary">↗ View on GitHub</a>
-          <a v-if="project.demoUrl" :href="project.demoUrl" target="_blank" rel="noopener noreferrer" class="btn-secondary">Live Demo →</a>
+         <a v-if="project.githubUrl" :href="project.githubUrl" target="_blank" rel="noopener noreferrer" class="btn-primary">View on GitHub</a>
+<a v-if="project.demoUrl" :href="project.demoUrl" target="_blank" rel="noopener noreferrer" class="btn-secondary">Live demo</a>
         </div>
       </div>
     </div>
