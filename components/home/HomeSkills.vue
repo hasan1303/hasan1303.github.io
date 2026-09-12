@@ -1,11 +1,10 @@
 <template>
   <section class="py-24 px-6 md:px-8" style="background: var(--bg2)">
     <div class="max-w-wide mx-auto">
-      <div class="section-label reveal">Capabilities</div>
-      <h2 class="font-display font-extrabold tracking-tighter text-4xl md:text-5xl mb-4 reveal reveal-delay-1">
+      <h2 class="font-display font-extrabold tracking-tighter text-4xl md:text-5xl mb-4 reveal">
         What I do best
       </h2>
-      <p class="text-lg mb-12 reveal reveal-delay-2 max-w-lg" style="color: var(--text2)">
+      <p class="text-lg mb-12 reveal reveal-delay-1 max-w-lg" style="color: var(--text2)">
         Specializing in the full spectrum of web development, from cloud infrastructure to pixel-perfect interfaces.
       </p>
 
