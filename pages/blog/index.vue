@@ -4,10 +4,10 @@
       <div class="max-w-wide mx-auto">
         <!-- Header -->
         <div class="section-label reveal">Writing</div>
-        <h1 class="font-display font-extrabold tracking-tighter text-5xl md:text-6xl mb-4 reveal reveal-delay-1">
-          Technical Blog
-        </h1>
-        <p class="text-lg mb-10 max-w-md reveal reveal-delay-2" style="color: var(--text2)">
+        <h1 class="font-display font-extrabold tracking-tighter text-5xl md:text-6xl mb-4 reveal">
+  Technical Blog
+</h1>
+<p class="text-lg mb-10 max-w-md reveal reveal-delay-1" style="color: var(--text2)">
           Deep dives, tutorials, and opinions on modern web development.
         </p>
 
