@@ -1,10 +1,6 @@
 <template>
   <section class="hero relative min-h-[calc(100vh-var(--nav-height))] flex items-center overflow-hidden px-6 md:px-8 pt-16 pb-12">
     <div class="absolute inset-0 bg-grid opacity-50 pointer-events-none" />
-    <div class="absolute top-[-20%] left-[20%] w-[600px] h-[600px] pointer-events-none"
-      style="background: radial-gradient(circle, rgba(123,110,246,0.15) 0%, transparent 70%)" />
-    <div class="absolute bottom-[-10%] right-[10%] w-[400px] h-[400px] pointer-events-none"
-      style="background: radial-gradient(circle, rgba(34,211,238,0.08) 0%, transparent 70%)" />
 
     <div class="max-w-wide mx-auto w-full relative z-10">
       <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-8 font-mono text-xs hero-anim"
@@ -15,8 +11,8 @@
 
       <h1 class="font-display font-extrabold tracking-tighter leading-extra-tight mb-6 hero-anim"
         style="font-size: clamp(3rem, 7vw, 5.5rem); animation-delay: 0.1s">
-        Hi, I'm <span class="text-gradient">Hasan</span> —<br>
-        I build with <span class="text-gradient">Vue.js</span>
+        Hi, I'm Hasan.<br>
+        I build with Vue.js.
       </h1>
 
       <p class="text-lg md:text-xl leading-relaxed max-w-xl mb-10 hero-anim"
@@ -26,20 +22,18 @@
       </p>
 
       <div class="flex flex-wrap gap-4 hero-anim" style="animation-delay: 0.3s">
-        <NuxtLink to="/projects" class="btn-primary">
-          View Projects <span>→</span>
-        </NuxtLink>
+        <NuxtLink to="/projects" class="btn-primary">View projects</NuxtLink>
         <a href="https://github.com/hasan1303" target="_blank" rel="noopener noreferrer" class="btn-secondary">
-          GitHub Profile ↗
+          GitHub profile
         </a>
       </div>
 
-      <div class="flex flex-wrap gap-8 md:gap-12 mt-14 pt-8 hero-anim"
-        style="border-top: 1px solid var(--border); animation-delay: 0.4s">
-        <div v-for="stat in stats" :key="stat.label">
-          <div class="font-display font-extrabold text-3xl tracking-tighter">{{ stat.value }}</div>
-          <div class="font-mono text-xs mt-1" style="color: var(--text3)">{{ stat.label }}</div>
-        </div>
+      <div class="mt-14 pt-8 hero-anim rounded-lg font-mono text-xs leading-7"
+        style="border-top: 1px solid var(--border); color: var(--text2); max-width: 360px">
+        <div style="padding-top: 12px"><span style="color: var(--accent2)">const</span> dev = {</div>
+        <div style="padding-left: 14px">stack: [<span style="color: var(--text3)">'Vue 3'</span>, <span style="color: var(--text3)">'Nuxt'</span>],</div>
+        <div style="padding-left: 14px">based: <span style="color: var(--text3)">'Durrës, AL'</span></div>
+        <div>}</div>
       </div>
 
       <div class="flex flex-wrap gap-2 mt-6 hero-anim" style="animation-delay: 0.5s">
@@ -50,7 +44,6 @@
 </template>
 
 <script setup lang="ts">
-import { stats } from '~/utils/data'
 const quickTech = ['Vue.js 3', 'Nuxt 3', 'Tailwind CSS', 'Pinia', 'Chart.js', 'WordPress']
 </script>
 
